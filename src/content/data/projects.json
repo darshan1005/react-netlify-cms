@@ -1,5 +1,5 @@
 {
-  "type": "projects",
+  "type": "products",
   "items": [
     {
       "title": "Title one",
@@ -14,5 +14,12 @@
       "image": "/uploads/demo-1.jpeg"
     }
   ],
-  "products": []
+  "products": [
+    {
+      "title": "product title 1",
+      "description": "product title 1 description",
+      "price": 300,
+      "image": "/uploads/demo-2-removebg-preview.png"
+    }
+  ]
 }
