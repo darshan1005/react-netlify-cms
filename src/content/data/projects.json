@@ -1,0 +1,31 @@
+{
+  "type": "projects",
+  "items": [
+    {
+      "title": "Title one",
+      "description": "Title one description",
+      "price": 96,
+      "image": "/uploads/demo-2-removebg-preview.png"
+    },
+    {
+      "title": "Title 2",
+      "description": "Title 2 description",
+      "price": 199,
+      "image": "/uploads/demo-1.jpeg"
+    }
+  ],
+  "products": [
+    {
+      "title": "Product title one",
+      "description": "Product title one description",
+      "price": 299,
+      "image": "/uploads/demo-2-removebg-preview.png"
+    },
+    {
+      "title": "Product title two",
+      "description": "Product title two description",
+      "price": 399,
+      "image": "/uploads/demo-2-removebg-preview.png"
+    }
+  ]
+}
