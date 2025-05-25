@@ -1,0 +1,10 @@
+{
+  "products": [
+    {
+      "title": "Product 1",
+      "description": "Product 1 description",
+      "price": 298,
+      "image": "/uploads/demo-2-removebg-preview.png"
+    }
+  ]
+}
