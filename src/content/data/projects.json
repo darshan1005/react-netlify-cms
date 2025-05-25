@@ -14,18 +14,5 @@
       "image": "/uploads/demo-1.jpeg"
     }
   ],
-  "products": [
-    {
-      "title": "Product title one",
-      "description": "Product title one description",
-      "price": 299,
-      "image": "/uploads/demo-2-removebg-preview.png"
-    },
-    {
-      "title": "Product title two",
-      "description": "Product title two description",
-      "price": 399,
-      "image": "/uploads/demo-2-removebg-preview.png"
-    }
-  ]
+  "products": []
 }
