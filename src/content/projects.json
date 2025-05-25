@@ -5,6 +5,12 @@
       "description": "Title description 1",
       "link": "https://github.com/darshan1005/react-netlify-cms",
       "image": "/uploads/CNN.jpg"
+    },
+    {
+      "title": "Title 2",
+      "description": "Title 2 description",
+      "link": "https://github.com/darshan1005/react-netlify-cms",
+      "image": "/uploads/demo-1.jpeg"
     }
   ]
 }
