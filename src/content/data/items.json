@@ -5,6 +5,12 @@
       "description": "Item 1 description",
       "price": 998,
       "image": "/uploads/demo-2-removebg-preview.png"
+    },
+    {
+      "title": "Item 2",
+      "description": "Item 2 description",
+      "price": 999,
+      "image": "/uploads/demo-2-removebg-preview.png"
     }
   ]
 }
