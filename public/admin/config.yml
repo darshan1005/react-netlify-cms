@@ -9,9 +9,9 @@ collections:
   - name: "data"
     label: "Data"
     label_singular: "Data File"
-    folder: "Data"
+    folder: "src/content/data"
     create: true
-    slug: "{{slug}}"
+    slug: "{{fields.type}}"
     format: "json"
     extension: "json"
     fields:
