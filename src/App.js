@@ -1,6 +1,6 @@
 import logo from "./logo.svg";
 import "./App.css";
-import ManualUploadForm from "./pages/ManualUploadForm";
+// import ManualUploadForm from "./pages/ManualUploadForm";
 
 function App() {
   return (
@@ -18,7 +18,8 @@ function App() {
         >
           Learn React
         </a>
-        <ManualUploadForm />
+        {/* Not implemented completly */}
+        {/* <ManualUploadForm /> */}
       </header>
     </div>
   );
