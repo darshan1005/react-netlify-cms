@@ -8,13 +8,16 @@ public_folder: "/uploads"           # public path to access those images
 collections:
   - name: "projects"
     label: "Projects"
-    folder: "src/content/projects"
-    create: true
+    file: "src/content/projects.json"
     format: "json"
-    extension: "json"
-    slug: "{{slug}}"
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Description", name: "description", widget: "text" }
-      - { label: "Link", name: "link", widget: "string" }
-      - { label: "Image", name: "image", widget: "image" }
+      - label: "Projects"
+        name: "projects"
+        widget: "list"
+        label_singular: "Project"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Description", name: "description", widget: "text" }
+          - { label: "Link", name: "link", widget: "string" }
+          - { label: "Image", name: "image", widget: "image" }
+
