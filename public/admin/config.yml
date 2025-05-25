@@ -6,28 +6,19 @@ media_folder: "public/uploads"
 public_folder: "/uploads"
 
 collections:
-  - name: "data"
-    label: "Data"
-    label_singular: "Data File"
+  - name: "items"
+    label: "Items"
+    label_singular: "Item File"
     folder: "src/content/data"
     create: true
-    slug: "{{fields.type}}"
+    slug: "item-{{slug}}"
     format: "json"
     extension: "json"
     fields:
-      - label: "Type"
-        name: "type"
-        widget: "select"
-        options:
-          - { label: "Projects", value: "projects" }
-          - { label: "Products", value: "products" }
-      - label: "Items (for Projects)"
+      - label: "Items"
         name: "items"
         widget: "list"
         label_singular: "Item"
-        condition:
-          field: "type"
-          equals: "projects"
         fields:
           - label: "Title"
             name: "title"
@@ -41,23 +32,30 @@ collections:
           - label: "Image"
             name: "image"
             widget: "image"
+
+  - name: "products"
+    label: "Products"
+    label_singular: "Product File"
+    folder: "src/content/data"
+    create: true
+    slug: "product-{{slug}}"
+    format: "json"
+    extension: "json"
+    fields:
       - label: "Products"
         name: "products"
         widget: "list"
         label_singular: "Product"
-        condition:
-          field: "type"
-          equals: "products"
         fields:
-          - label: "Product Title"
+          - label: "Title"
             name: "title"
             widget: "string"
-          - label: "Product Description"
+          - label: "Description"
             name: "description"
             widget: "text"
-          - label: "Product Price"
+          - label: "Price"
             name: "price"
             widget: "number"
-          - label: "Product Image"
+          - label: "Image"
             name: "image"
             widget: "image"
