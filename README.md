@@ -184,7 +184,7 @@ mkdir -p static/admin
 
 ### 4. ✅ Enable Identity and Git Gateway on Netlify
 
-1. Go to your Netlify site → **Site Settings → Identity** / **PROJECT CONFIGURATION**
+1. Go to your Netlify site → **Site Settings / PROJECT CONFIGURATION → Identity** 
 2. Enable **Identity**
 3. Go to **Identity → Services → Git Gateway** → Enable it
 4. Under **Identity → Users**, invite yourself with an email to log in
