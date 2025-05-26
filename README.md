@@ -75,6 +75,12 @@ collections:
   "projects": []
 }
 ```
+Commit it to Git:
+
+```bash
+git add src/content/projects.json
+git commit -m "Add empty projects.json for Netlify CMS"
+```
 
 For multiple file 
 ```
@@ -142,13 +148,6 @@ src/content/data/
 └── products.json
 ```
 
-Commit it to Git:
-
-```bash
-git add src/content/projects.json
-git commit -m "Add empty projects.json for Netlify CMS"
-```
-
 ---
 
 ### 2. ✅ Create the CMS Admin Area
@@ -159,7 +158,7 @@ Inside your React project:
 mkdir -p static/admin
 ```
 
-**static/admin/index.html**
+**public/admin/index.html**
 
 ```html
 <!DOCTYPE html>
@@ -169,7 +168,8 @@ mkdir -p static/admin
     <title>Content Manager</title>
   </head>
   <body>
-    <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <script src="https://unpkg.com/netlify-cms@^2.10.0/dist/netlify-cms.js"></script>
   </body>
 </html>
 ```
@@ -178,47 +178,13 @@ mkdir -p static/admin
 
 ### 3. ✅ Configure `config.yml`
 
-**static/admin/config.yml**:
-
-```yaml
-backend:
-  name: git-gateway
-  branch: main
-
-media_folder: "public/uploads"      # where uploaded images go
-public_folder: "/uploads"           # how images are referenced publicly
-
-collections:
-  - name: "projects"
-    label: "Projects"
-    label_singular: "Project"
-    file: "src/content/projects.json"
-    format: "json"
-    fields:
-      - label: "Projects"
-        name: "projects"
-        widget: "list"
-        label_singular: "Project"
-        fields:
-          - label: "Title"
-            name: "title"
-            widget: "string"
-          - label: "Description"
-            name: "description"
-            widget: "text"
-          - label: "Link"
-            name: "link"
-            widget: "string"
-          - label: "Image"
-            name: "image"
-            widget: "image"
-```
+**public/admin/config.yml**:
 
 ---
 
 ### 4. ✅ Enable Identity and Git Gateway on Netlify
 
-1. Go to your Netlify site → **Site Settings → Identity**
+1. Go to your Netlify site → **Site Settings → Identity** / **PROJECT CONFIGURATION**
 2. Enable **Identity**
 3. Go to **Identity → Services → Git Gateway** → Enable it
 4. Under **Identity → Users**, invite yourself with an email to log in
