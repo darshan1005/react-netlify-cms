@@ -34,10 +34,112 @@ mkdir -p src/content
 
 Then create `projects.json` with this content:
 
+For single File
+```
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "public/uploads"
+public_folder: "/uploads"
+
+collections:
+  - name: "projects"
+    label: "Projects"
+    files:
+      - label: "Projects"
+        name: "projects"
+        file: "src/content/projects.json"
+        format: "json"
+        fields:
+          - label: "Projects"
+            name: "projects"
+            widget: "list"
+            label_singular: "Project"
+            fields:
+              - label: "Title"
+                name: "title"
+                widget: "string"
+              - label: "Description"
+                name: "description"
+                widget: "text"
+              - label: "Link"
+                name: "link"
+                widget: "string"
+              - label: "Image"
+                name: "image"
+                widget: "image"
+```
 ```json
 {
   "projects": []
 }
+```
+
+For multiple file 
+```
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "public/uploads"
+public_folder: "/uploads"
+
+collections:
+  - name: "data"
+    label: "Data"
+    files:
+      - label: "Items"
+        name: "items"
+        file: "src/content/data/items.json"
+        format: "json"
+        fields:
+          - label: "Items"
+            name: "items"
+            widget: "list"
+            label_singular: "Item"
+            fields:
+              - label: "Title"
+                name: "title"
+                widget: "string"
+              - label: "Description"
+                name: "description"
+                widget: "text"
+              - label: "Price"
+                name: "price"
+                widget: "number"
+              - label: "Image"
+                name: "image"
+                widget: "image"
+
+      - label: "Products"
+        name: "products"
+        file: "src/content/data/products.json"
+        format: "json"
+        fields:
+          - label: "Products"
+            name: "products"
+            widget: "list"
+            label_singular: "Product"
+            fields:
+              - label: "Title"
+                name: "title"
+                widget: "string"
+              - label: "Description"
+                name: "description"
+                widget: "text"
+              - label: "Price"
+                name: "price"
+                widget: "number"
+              - label: "Image"
+                name: "image"
+                widget: "image"
+```
+```
+Output : 
+src/content/data/
+├── items.json
+└── products.json
 ```
 
 Commit it to Git:
