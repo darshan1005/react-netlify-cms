@@ -236,6 +236,13 @@ export default ProjectList
 For multiple content types, update your `config.yml`:
 
 ```yaml
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "public/uploads"
+public_folder: "/uploads"
+
 collections:
   - name: "projects"
     label: "Projects"
